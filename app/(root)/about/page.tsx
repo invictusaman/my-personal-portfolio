@@ -36,7 +36,7 @@ export default function AboutPage() {
             Hi, my name is <b>Aman Bhattarai</b>, and I was born in a small village in <i>Nepal</i>. The very first time I got interested in computers was when my dad introduced a desktop computer to our home while I was in Grade 5. I quickly became fascinated, spending many hours downloading software&apos;s, examining their capabilities and thinking about how one could built such a thing. This curiosity formed at such an early age paved for my love and appreciation for technology and programming.
             <br/>
             <div className="text-center max-w-md mx-auto mt-6 overflow-hidden">
-            <Image className="rounded-lg" src='/static/small-me.webp' alt='Small me' width='600' height='800'/>
+            <Image className="rounded-lg" src='/about/small-me.webp' alt='Small me' width='600' height='800'/>
             <p className="text-sm px-4">Yep, that was me in Grade 5 (probably) !</p>
             </div>
             <br/>
@@ -45,7 +45,7 @@ export default function AboutPage() {
             With this passion for numbers and technologies, I went to <i>Silicon valley of India -- Bangalore</i>, where I did my <b>Bachelors degree in Computer Science and Engineering</b>. There, I did not only improve my programming proficiency but also for the first time I created a personal blog, which is currently live at <a href='https://www.twistblogg.com' rel="nofollow noopener" target="_blank">TwistBlogg.com</a>. I used to post themes and plugins for blogger, and write contents.
             <br/>
             <div className="text-center max-w-lg mx-auto mt-8 overflow-hidden">
-            <Image className="rounded-lg" src='/static/bangalore-days.jpg' alt='Bangalore Days' width='800' height='533'/>
+            <Image className="rounded-lg" src='/about/bangalore-days.jpg' alt='Bangalore Days' width='800' height='533'/>
             <p className="text-sm px-4">Ethnic day at NHCE College, Bangalore</p>
             </div>
             <br/>
@@ -54,7 +54,7 @@ export default function AboutPage() {
             As I gained more knowledge in the tech field, I found myself naturally drawn to data. Either it was my love for numbers or my passion towards AI. Either way, this led me to do a degree in <b>Artificial Intelligence and Data Science</b> in <i>Canada</i>.
             <br/>
             <div className="text-center max-w-md mx-auto mt-8 overflow-hidden">
-            <Image className="rounded-lg" src='/static/me-in-canada.webp' alt='Niagara Falls Canada' width='1500' height='2421'/>
+            <Image className="rounded-lg" src='/about/me-in-canada.webp' alt='Niagara Falls Canada' width='1500' height='2421'/>
             <p className="text-sm px-4">My very first visit to Niagara Falls back in 2021</p>
             </div>
             <br/>
