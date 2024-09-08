@@ -30,13 +30,13 @@ export default function ProjectsFeaturedPage() {
                                     <div className="relative">
                                         {project.image && (
                                             <Image
-                                                priority
                                                 alt={project.title}
                                                 className="object-cover shadow-xl rounded-lg"
                                                 width={1280}
                                                 height={832}
-                                                quality={100}
                                                 src={project.image}
+                                                blurDataURL="data:..."
+                                                placeholder="blur"
                                             />
                                         )}
                                     </div>
@@ -67,7 +67,7 @@ export default function ProjectsFeaturedPage() {
                                     )}
                                 </CardHeader>
                                 <CardFooter className="flex flex-wrap gap-2 mt-4">
-                                    <Link href={`${project.slug}`}>
+                                    <Link href={`${project.slug}`} aria-label={`Read case on ${project.title}`}>
                                         <Button variant="noChange" className="px-12 py-2 font-light xl:py-3">Read Case</Button>
                                     </Link>
                                 </CardFooter>

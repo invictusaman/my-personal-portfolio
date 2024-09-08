@@ -36,9 +36,8 @@ export default function Hero() {
               </motion.div>
             </ContactForm>
             {/* Title */}
-             {/* Title */}
           <motion.h1
-            className="mb-8 max-w-3xl text-4xl font-bold md:mb-10 md:text-5xl lg:mb-12 lg:text-6xl"
+            className="mb-4 max-w-3xl text-4xl font-bold md:mb-6 md:text-5xl lg:mb-8 lg:text-6xl"
             {...slideFromBottom}
           >
             Creating Compelling Stories From Data
@@ -52,9 +51,9 @@ export default function Hero() {
             I turn complex data into clear, impactful stories, providing actionable insights that drive strategic business decisions.
           </motion.p>
             {/* Buttons and Social Icons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 md:gap-8">
               <Link href="https://www.kaggle.com/amanbhattarai695" target="_blank" rel="nofollow noopener external">
-                <Button variant="default" className="mr-2 text-md md:text-lg px-6 py-6 text-center font-light md:mr-4 md:px-7 md:py-7">
+                <Button variant="default" className="text-md md:text-lg px-6 py-6 text-center font-light md:px-7 md:py-7">
                   I am on Kaggle
                 </Button>
               </Link>
@@ -65,19 +64,6 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-
-          {/* Data visualization elements */}
-          <div className="hidden lg:inline-block absolute bottom-[18%] left-10 opacity-30">
-            <BarChart size={48} />
-          </div>
-          <motion.div
-          className="hidden md:inline-block absolute top-[48%] left-[28%] opacity-30"
-          animate={{ x: [0, 10, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <TrendingUp size={56} />
-        </motion.div>
-
         </motion.div>
 
         {/* Hero bottom */}
@@ -90,9 +76,10 @@ export default function Hero() {
               {...scaleIn}
             >
               <Image
-                src="/profile-pic.webp"
-                width={480}
-                height={480}
+                priority
+                src="/profile-pic.jpg"
+                width={450}
+                height={450}
                 alt="Aman - Data Analyst"
                 className="object-cover rounded-lg shadow-lg"
               />
@@ -102,7 +89,7 @@ export default function Hero() {
               {...slideFromLeft}
             >
               {/* Title */}
-              <h3 className="text-2xl mt-5 font-bold md:text-3xl lg:mt-0">Meet Aman</h3>
+              <p className="text-2xl mt-5 font-bold md:text-3xl lg:mt-0">Meet Aman</p>
               {/* Divider */}
               <motion.div
                 className="my-4 w-16 border-t border-muted-foreground"
@@ -118,7 +105,8 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
                 <a href="#about-section">
-                  <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+                  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" role='arrow' aria-labelledby="arrow-title">
+                    <title id="arrow-title">Arrow Down</title>
                     <path d="M44 36L42.59 34.59L37 40.17V28H35V40.17L29.42 34.58L28 36L36 44L44 36Z" fill="currentColor"/>
                     <circle cx="36" cy="36" r="35.5" stroke="#E2E2E2"/>
                   </svg>

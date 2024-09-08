@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   FileCode,
   FileText,
@@ -34,6 +35,13 @@ function getRandomColor() {
 }
 
 export default function TechStack() {
+  const [techColors, setTechColors] = useState<string[]>([]);
+
+  useEffect(() => {
+    const generatedColors = TECH_STACK.map(() => getRandomColor());
+    setTechColors(generatedColors);
+  }, []);
+
   return (
     <Card className="h-full border-0 bg-singleCard text-singleCard-foreground">
       <CardHeader>
@@ -44,11 +52,11 @@ export default function TechStack() {
           </div>
         </div>
         <div className="flex flex-wrap gap-1.5">
-          {TECH_STACK.map((tech) => (
+          {TECH_STACK.map((tech, index) => (
             <Link className="cursor-default" href={tech.href} key={tech.title} target="_blank" rel="nofollow noopener">
               <Badge variant="secondary" className="bg-[hsl(215_24%_80%)] text-singleCard-foreground text-sm lg:text-md hover:bg-[hsl(215_24%_70%)]">
                 <div
-                  className={`${getRandomColor()} w-4 h-4 mr-2 rounded-full`}
+                  className={`${techColors[index] || 'bg-cyan-400'} w-4 h-4 mr-2 rounded-full`}
                 />
                 {tech.title}
               </Badge>

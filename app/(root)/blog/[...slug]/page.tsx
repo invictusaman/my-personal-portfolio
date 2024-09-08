@@ -53,9 +53,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
         {post.image && (
         <div className="my-8 relative wide-image">
             <Image
+            priority
             src={post.image}
             alt={post.title}
-            width={1200}
+            width={1280}
             height={675}
             className="mx-auto object-cover xl:rounded-lg"
             />

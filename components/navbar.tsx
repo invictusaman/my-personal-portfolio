@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import Link from "next/link";
 import Logo from "./ui/logo";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -19,27 +20,32 @@ interface NavItemProps {
   role?: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, title, role, ...props }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-  const isCurrentPageHomepage = pathname === "/";
+const NavItem = React.forwardRef<HTMLAnchorElement, NavItemProps>(
+  ({ href, title, role, ...props }, ref) => {
+    const pathname = usePathname();
+    const isActive = pathname === href;
+    const isCurrentPageHomepage = pathname === "/";
 
-  return (
-    <Link
-      href={href}
-      role={role}
-      {...props}
-      className={cn(
-        "transition-colors duration-200",
-        isActive
-          ? (isCurrentPageHomepage ? "text-[hsl(0_0%_5%)] line-through cursor-not-allowed" : "text-foreground line-through cursor-not-allowed")
-          : (isCurrentPageHomepage ? "text-singleCard-foreground hover:text-[hsl(0_0%_5%)]" : "text-muted-foreground hover:text-foreground")
-      )}
-    >
-      {title}
-    </Link>
-  );
-};
+    return (
+      <Link
+        href={href}
+        role={role}
+        ref={ref}
+        {...props}
+        className={cn(
+          "transition-colors duration-200",
+          isActive
+            ? (isCurrentPageHomepage ? "text-[hsl(0_0%_5%)] cursor-not-allowed" : "text-foreground cursor-not-allowed")
+            : (isCurrentPageHomepage ? "text-singleCard-foreground hover:text-[hsl(0_0%_5%)]" : "text-muted-foreground hover:text-foreground")
+        )}
+      >
+        {title}
+      </Link>
+    );
+  }
+);
+
+NavItem.displayName = 'NavItem';
 
 const mobileNavVariants = {
   hidden: { opacity: 0, x: "100%" },
@@ -121,9 +127,11 @@ const Navbar: React.FC = () => {
                         />
                       </SheetClose>
                     ))}
-                    <ContactForm>
-                      <NavItem href="#" title="Contact" role="button"/>
-                    </ContactForm>
+                    <SheetClose asChild>
+                      <ContactForm>
+                        <NavItem href="#" title="Contact" role="button"/>
+                      </ContactForm>
+                    </SheetClose>
                   </motion.nav>
                 </AnimatePresence>
               </SheetContent>

@@ -74,6 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.image && (
                     <div className="my-8 relative wide-image">
                         <Image
+                            priority
                             src={project.image}
                             alt={project.title}
                             width={1200}

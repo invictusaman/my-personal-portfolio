@@ -56,7 +56,7 @@ export default function PostItem({ slug, title, description, date, image, tags, 
                                     </dl>
                                 )}
                             </div>
-                            <Link href={`${slug}`}>
+                            <Link href={`${slug}`} aria-label={`Read more about ${title}`}>
                                 <Button variant="noChange" className="px-12 py-2 font-light xl:py-3">Read More</Button>
                             </Link>
                         </CardFooter>
@@ -65,13 +65,14 @@ export default function PostItem({ slug, title, description, date, image, tags, 
                         <Link href={`${slug}`} className="w-full flex-shrink-0 px-6 lg:px-8 cursor-default">
                             <div className="relative w-full pt-6 overflow-hidden">
                                 <Image
-                                    priority
                                     alt={title}
                                     className="object-cover rounded-tl-lg rounded-tr-lg h-80"
                                     width={1280}
                                     height={832}
                                     quality={100}
                                     src={image}
+                                    blurDataURL="data:..."
+                                    placeholder="blur"
                                 />
                             </div>
                         </Link>

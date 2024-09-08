@@ -28,13 +28,14 @@ export default function ProjectItem({ slug, title, description, image, tags, bac
                     <div className="relative w-full h-full flex justify-center items-center p-4 lg:p-8">
                         <div className="relative">
                             {(image && <Image
-                                priority
                                 alt={title}
                                 className="object-cover shadow-xl rounded-lg"
                                 width={1280}
                                 height={832}
                                 quality={100}
                                 src={image}
+                                blurDataURL="data:..."
+                                placeholder="blur"
                             />)}
                         </div>
                     </div>
@@ -64,7 +65,7 @@ export default function ProjectItem({ slug, title, description, image, tags, bac
                         )}
                     </CardHeader>
                     <CardFooter className="flex flex-wrap gap-2 mt-4">
-                        <Link href={`${slug}`}>
+                        <Link href={`${slug}`} aria-label={`Read case on ${title}`}>
                             <Button variant="noChange" className="px-12 py-2 font-light xl:py-3">Read Case</Button>
                         </Link>
                     </CardFooter>

@@ -7,11 +7,6 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 
 export default function AboutPage() {
-  const carouselImages = [
-    "/static/image1.png",
-    "/static/dashboard.avif",
-    "/static/profile-pic.webp",
-  ];
 
   const skills = {
     technical: {
