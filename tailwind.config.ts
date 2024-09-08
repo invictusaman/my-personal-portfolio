@@ -52,6 +52,14 @@ const config = {
                 card: {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))"
+                },
+                singleCard: {
+                    DEFAULT: "hsl(var(--singleCard))",
+                    foreground: "hsl(var(--singleCard-foreground))"
+                },
+                noChange: {
+                    DEFAULT: "hsl(var(--noChange))",
+                    foreground: "hsl(var(--noChange-foreground))"
                 }
             },
             borderRadius: {
@@ -75,7 +83,7 @@ const config = {
             }
         }
     },
-    plugins: [require("tailwindcss-animate")]
+    plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')]
 } satisfies Config
 
 export default config

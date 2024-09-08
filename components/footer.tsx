@@ -1,50 +1,36 @@
-import { FOOTER_PAGES, OTHERS, SOCIALS } from "@/config";
-import Link from "next/link";
+'use client';
+
+import React from 'react';
+import MaxWidthWrapper from "./max-width-wrapper";
+import CodingHours from "./coding-hours";
+import Connect from "./connect";
+import Available from "./available";
+import TechStack from "./techstack";
+import Location from "./location";
+import GiveStar from "./give-star";
+import AnimatedWrapper from "./animated-framer-wrapper";
 
 export default function Footer() {
-  const getYear = () => {
-    return new Date().getFullYear();
-  };
   return (
-    <footer className="bg-background mx-auto w-full max-w-screen-xl px-6 md:px-20 z-50">
-      <div className="border-t w-full py-6">
-        <div className="grid grid-cols-3">
-          <div className="flex flex-col gap-4 w-fit">
-            {FOOTER_PAGES.map((page) => (
-              <Link
-                key={page.href}
-                href={page.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {page.title}
-              </Link>
-            ))}
+    <MaxWidthWrapper className="pb-8 pt-15 md:pb-12 md:pt-20">
+      <AnimatedWrapper variant="gentleRise" delay={0.6} useInView={true}>
+        <footer className="font-light pt-10 border-t-[10px] border-t-singleCard grid sm:grid-cols-2 gap-4 sm:gap-8">
+          <div className="grid gap-4">
+            <Connect />
+            <div className="grid grid-cols-2 gap-4">
+              <CodingHours />
+              <GiveStar />
+            </div>
           </div>
-          <div className="flex flex-col gap-4 w-fit">
-            {SOCIALS.map((social) => (
-              <Link
-                key={social.href}
-                href={social.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {social.title}
-              </Link>
-            ))}
+          <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-2 gap-4">
+              <Available />
+              <Location />
+            </div>
+            <TechStack />
           </div>
-          <div className="flex flex-col gap-4 w-fit">
-            {OTHERS.map((social) => (
-              <Link
-                key={social.href}
-                href={social.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {social.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-        <p className="pt-8">© {getYear()} swajp</p>
-      </div>
-    </footer>
+        </footer>
+      </AnimatedWrapper>
+    </MaxWidthWrapper>
   );
 }

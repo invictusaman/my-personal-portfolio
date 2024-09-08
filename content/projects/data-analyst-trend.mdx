@@ -1,0 +1,147 @@
+---
+title: Data Analyst Job Roles in Canada [Case Study]
+description: Recently, I started seeking job opportunities for a data analyst role in Canada and wanted to know the latest job market trend.\n\nThis case study showcases my journey of data collection, data preprocessing and data visualization to answer some questions and generate a story.
+date: Sept 4, 2024
+published: true
+featured: true
+image: /projects/datatrend/data-dashboard.jpg
+tags: ['Scraping', 'Python', 'Visualization']
+timeline: '2 Weeks - Aug 2024'
+background: '#CCF8FF'
+---
+
+Ever wondered what it's like to be a Data Analyst in Canada? With the demand for data-driven insights skyrocketing, I decided to dig into the numbers and uncover what makes this role tick.
+
+Whether you're curious about the top employers, the hottest skills, or just looking to get your foot in the door, this case study has got you covered. Let's dive into the data and see what it takes to succeed as a Data Analyst in Canada!
+
+Wait, Wait, Wait. Before diving into the data, the first step in any analysis is **asking questions**. *Why are we doing this analysis in the first place? What are we hoping to uncover? What insights will help us make better decisions?* These are the questions that guide the entire process, turning a pile of numbers into something meaningful. Here are a few questions I had in mind:
+
+
+#### Questions to be answered:
+
+1) Which Data Analyst job titles and roles are most in demand right now?
+
+2) What are the top skills required to land a Data Analyst job?
+
+3) Which provinces and cities offer the most job opportunities?
+
+4) Which employers are hiring the most, and which industry they belong to?
+
+5) How do job opportunities for entry-level or junior positions compare to those for advanced or senior roles?
+
+6) What salary can I expect for different Data positions, and how do factors like work type and seniority affect salary?
+
+By starting with these questions, I set the stage for a data journey that's not just about crunching numbers, but about finding stories within the data. As I delved deeper, I began forming some hypotheses to guide my analysis:
+
+#### Hypotheses
+
+1) I expected Senior Data Analyst positions and Business Intelligence (BI) roles to be the most in demand.
+2) As I mentioned in the beginning, I assumed that SQL, Python, and R would be most prevalent in the skillset.
+3) I believed that Ontario, and more specifically Toronto, would be the most popular location for Data Analyst jobs.
+4) I assumed that large organizations such as the CRA particularly within the Information Technology field would be at the forefront.
+5) My initial assumption was that senior positions would encompass considerably more opportunities than junior ones.
+6) I proposed the range of salaries from $ 50,000 to $ 100,000 with staff positions being higher and in-person positions being the highest paid.
+
+With these hypotheses in mind, I was ready to dive into the data and see how reality stacks up against my expectations.
+
+---
+
+### Data Collection
+
+After setting the questions and forming hypotheses, the next step in any data analysis journey is **gathering the information** you need, and that's exactly where I started.
+
+For that, I web scraped job titles listed for Data Analyst roles from both Indeed and Glassdoor, pulling together a raw dataset that captures a snapshot of the current job market. *For those interested in the technical details, I've added the scraper tool I used to my [GitHub profile](https://github.com/invictusaman).*
+
+After gathering the data, I applied various transformation techniques to clean it up, making sure everything was ready for deeper analysis. To keep things transparent and accessible, I’ve made both the raw and cleaned datasets [publicly available on Kaggle](https://www.kaggle.com/datasets/amanbhattarai695/data-analyst-job-roles-in-canada). You can access them and follow along as we move into the next step: Data Visualization and Exploratory Data Analysis (EDA).
+
+# Data Analyst Jobs In Canada — Visualization
+
+Enough talking — let's dive into the fun part and see what the data reveals through visualization!
+
+## Q1: Which Data Analyst job titles and roles are most in demand right now?
+
+<Image src='/projects/datatrend/image1.png' width='1790' height='1286' alt='most demanded data analyst job titles in canada'/>
+
+ **Finding:** It turns out that Senior Supply Chain Data Analysts are in the highest demand, followed by Senior BI Analysts and Senior Business Analysts. *What's interesting is that most of the job openings are for senior positions, showing that experience really makes a difference.*
+
+ ### Q1 (cont.) : Demanding Data Job Roles in Canada
+
+<Image src='/projects/datatrend/image2.png' width='1563' height='1252' alt='trending job roles in canada for data jobs'/>
+
+**Findings:** Analyst roles, especially Business Analysts and Data Analysts, are most in demand, highlighting that companies value expertise in analyzing and interpreting data for strategic decision-making.
+
+---
+
+## Q2: What are the top skills required to land a Data Analyst job?
+
+<Image src='/projects/datatrend/image3.png' width='951' height='722' alt='top skills required to land a Data Analyst job'/>
+
+**Findings:** The top skills in demand include tools like Power BI, Tableau, Excel, and Azure; languages such as SQL, Python, and R; technologies like NoSQL and database management; and techniques in statistics. This mix highlights what companies need for effective data analysis and decision-making.
+
+---
+
+## Q3: Which provinces and cities offer the most job opportunities?
+
+<Image src='/projects/datatrend/image4.png' width='968' height='1298' alt='data analyst job postings in canada by province'/>
+
+**Findings:** Ontario accounts for about half of the demand for analysts, followed by British Columbia, Alberta, Quebec, and Manitoba.
+
+### Q3 (cont.) : Top cities in each province for analyst roles
+
+<Image src='/projects/datatrend/image5.png' width='1820' height='1301' alt='top cities in each province for analyst roles'/>
+
+**Findings:** Toronto, Vancouver, Calgary, Montreal, and Winnipeg are the top cities with the highest demand for analysts.
+
+---
+
+## Q4 : Which employers are hiring the most, and which industry they belong to?
+
+<Image src='/projects/datatrend/image6.png' width='1975' height='1491' alt='top 10 employers in canada for data analyst roles'/>
+
+**Findings:** Scotiabank and the Royal Bank of Canada are hiring the most analysts, with both companies in the finance sector. This trend suggests a high demand for Business Analysts.
+
+---
+
+## Q5 : How do job opportunities for entry-level or junior positions compare to those for advanced or senior roles?
+
+<Image src='/projects/datatrend/image7.png' width='989' height='790' alt='distribution of job opportunities by seniority level'/>
+
+
+**Findings:** Over 90% of listings are for senior or mid-level positions, leaving few opportunities for entry-level candidates. It's a tough situation for those just starting out. *Just a note: Percentage is based on mentioned level of positions, and most jobs had no mention of level.*
+
+---
+
+## Q6 : What salary can I expect for Data Analyst positions, and how do factors like work type, seniority, and industry affect it?
+
+<Image src='/projects/datatrend/image8.png' width='1590' height='1001' alt='salary distribution for top data roles'/>
+
+**Findings:** Data Engineers earn the highest salaries, followed by Developers and Data Specialists.
+
+### Q6 (cont.) : Salary Distribution by Seniority
+
+<Image src='/projects/datatrend/image9.png' width='1589' height='1038' alt='average salary distribution by seniority level'/>
+
+**Findings:** The graph speaks for itself: Senior positions command the highest salaries, averaging around $80K. Interestingly, some mid-level jobs have starting salaries that are lower than those for junior positions.
+
+### Q6 (cont.) : Salary Distribution by Work Type
+
+<Image src='/projects/datatrend/image10.png' width='1589' height='1038' alt='average salary distribution by work type'/>
+
+**Findings:** In-person jobs offer the highest salaries, followed by remote and hybrid positions.
+
+---
+
+## Key Findings for Analyst Jobs in Canada
+
+- Senior roles are in high demand, averaging $80K, with some mid-level jobs starting lower than entry-level positions.
+- Scotiabank and the Royal Bank of Canada are major employers in the finance sector.
+- Only about 10% of listings are for entry-level positions.
+- In-person roles offer the highest salaries, followed by remote and hybrid jobs.
+- Skills in Power BI, SQL, Python, and NoSQL are most in demand.
+- Data Engineers have the highest average salaries at around $100K.
+
+---
+
+Thank you for reading! Feel free to share this and leave a comment with your thoughts or questions. *What trends did you find most surprising? Do you have any insights on the data?*
+
+<small><i>Thumbnail image by <a href="https://www.freepik.com/free-vector/dashboard-user-panel-template_6144811.htm" rel='nofollow noopener external' target='_blank'>freepik</a></i></small>

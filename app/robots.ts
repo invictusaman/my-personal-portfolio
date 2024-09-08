@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://swajp.me/sitemap.xml",
+    sitemap: "https://www.amanbhattarai.com/sitemap.xml",
   };
 }

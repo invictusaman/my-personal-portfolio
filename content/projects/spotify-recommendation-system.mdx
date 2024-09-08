@@ -1,0 +1,117 @@
+---
+title: Spotify Playlist Recommendation System
+description: Generate your own unique collections with our Spotify recommendation feature. Find new songs to download or listen based on preference while also promoting upcoming artists.\n\nThis project was conducted as a part of Capstone Project.
+date: Sept 1, 2024
+published: true
+featured: true
+image: /projects/spotify/spotify.webp
+tags: ['Python', 'Model Building', 'APIs Call']
+timeline: 'May 2022 - Aug 2022'
+background: '#E3FDD0'
+---
+
+## Problem Statement ⚠️
+There are millions of songs to choose from, thus it is challenging to come across music that matches your interest. Users face hard time to find new tracks and the record labels to get new listeners. The need for more personalized song recommendations system is needed.
+
+## Objective 🔎
+Build a Spotify recommendation model which takes user playlist into consideration and generates similar songs. This means that the users get to discover new songs based on their interest while new or lesser-known artists get a chance to find new listeners.
+
+## Solution ✍️
+We deployed a Spotify Recommendation System that generates recommendations for a playlist based on a user&apos;s playlist. In this approach users provide a URL or a playlist ID, and the system processes it to discover related songs. It then forms a new playlist with these recommendations, making it easier for users to find new songs as well as support upcoming musicians. This system can also be implemented as a web, mobile app or a feature on the Spotify.
+
+## Implementation 🧑‍💻
+
+The model was built using Python language and we utilized the Spotify API to extract features and fetch users&apos; playlists. We employed machine learning algorithms to identify song features so as to be able to recommend similar songs. The backend focuses on the analysis of playlist information as well as the generation of the recommendations while the frontend ensures the users are presented with a clear way to interact with the system.
+
+### Setting Project Timeline
+
+We had limited time to build our model, and it was necessary to set expected timeline for each data analysis process. This figure demonstrates our timeline for the project.
+
+<Image src='/projects/spotify/project_timeline.png' width='2422' height='888' alt='Project Timeline for Our project'/>
+
+
+### Data Collection & Feature Extraction
+
+We used available dataset from [AICrowd](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge) that contained 1 million playlist. It was a huge dataset with 1000 JSON files and each JSON file with 1000 playlists, hence making it a 1 million playlist dataset. For our project, we used only one JSON file because of resource constraints.
+
+We fetched Spotify data in the form of Json file, converted it into csv file, cleaned it and used Spotify API to fetch the data features. To remove duplicate values, we combined artist and song name.
+
+<Image src='/projects/spotify/featureextraction.png' width='1318' height='1268' alt='Data Collection to Feature Extraction'/>
+
+
+### Data PreProcessing & Model Building *(Tech Stack)*
+
+- Text Data Transformation: For text processing and analysis, we used **TextBlob**, and **TF_IDF Vectorizer** from scikit-learn for converting the text data into numerical form which signifies the words importance in view of the set dataset.
+
+- Feature Scaling: We used **MinMaxScaler** to normalize the numerical features for proper scaling to feed into the machine learning algorithms.
+
+- Categorical Data Encoding: To transform the categorical features into a format that is compatible with machine learning algorithms, we used **one-hot encoding**.
+
+- Similarity Measurement: We utilized **cosine similarity** from scikit-learn to determine the degree of similarity and in the process, recommend songs related to them.
+
+- Data Manipulation: We used **NumPy** and **Pandas** for sorting, cleaning, and transforming the data into a more analyzable form.
+
+### Data Visualization - Exploratory Data Analysis
+
+<WideImage src='/projects/spotify/eda1.png' width='2126' height='1134' alt='Top 10 artists in Spotify'/>
+
+**Finding:** Pearl Jam is the number one artist on Spotify based on the  number of songs, followed by Tegan and Sara, Drake.
+
+<WideImage src='/projects/spotify/eda2.png' width='2100' height='1244' alt='Artist with highest danceability score'/>
+
+**Finding:** Drake songs are most danceable songs, meaning people love to dance on Drake songs, followed by Kendrick and Kanye.
+
+<WideImage src='/projects/spotify/eda3.png' width='1954' height='1032' alt='correlation of features and label using heatmap'/>
+
+**Finding:** Features *energy* and *loudness* are highly positive correlated meaning increase in loudness increase energy and vice versa. Whereas, energy and acoustiness are highly negative correlated meaning increase in one decrease other.
+
+---
+
+## Challenges We Faced 😵‍💫
+
+- **Data Collection:** Data search and collection of appropriate and comprehensive information from multiple sources was rather challenging and demanding.
+
+- **Data Formatting:** This required a significant amount of preprocessing to ensure the data scanned from one format was the same when in another format.
+
+- **Computational Limitations:** More data and complex algorithms required the consumption of more computer resources.
+
+- **Inappropriate Content:** This process ensured that only relevant quality content was recommended to the users thereby improving the quality of recommendations.
+
+- **Privacy of Users:** Preserving the user&apos;s privacy was important, especially in relation to data protection legislation.
+
+- **API Integration:** Some challenges of managing Spotify API integration includes authorization, API limits as well as API Speed.
+
+- **Performance with Large Data:** A large number of data created issues related to processing capability of the machine learning algorithms, hence, optimizations were needed.
+
+---
+
+
+## Result 📝
+
+The model was able to create individual playlists that were well appreciated by 85% of the users in terms of feedback. There was a testimony from the users who indicated having found other tracks which they preferred through the feature; recommended playlists for emerging artistes received a 30% boost. Other metrics of performance indicated that the recommendation engine was able to handle the playlists and generate recommendations in seconds.
+
+## Final Product 🏆
+
+The model was deployed and hosted at pythonanywhere.com. Due to limited resources, the live version is shut down, however, the final product can be seen below -
+
+<Image src='/projects/spotify/finalproduct1.png' width='1640' height='710' alt='final product for spotify recommendation system'/>
+
+<Image src='/projects/spotify/finalproduct2.png' width='1616' height='710' alt='displaying results from our model'/>
+
+---
+
+## Conclusion ✍️
+
+The Spotify Recommendation System successfully solves the issue of music recommendation by providing the list of songs based on the user's preferences. It improves the overall experience of the user, while at the same time helping to promote new or lesser known artists. Thus, we can conclude, the project achieved its goals and provided significant benefits to users and the music industry.
+
+## Future Work 💼
+
+The recommendation of the model can be further improved by incorporating the user&apos;s feedback. Other methods of enhancing the system's efficiency can also be proposed - to expand the focus of the system to apply to the other types of music and to implement more advanced AI approaches to recommendations. Also, we can deploy a standalone web app for users to test the product live without any limitations.
+
+<div className="mt-16 flex flex-wrap justify-center">
+<a href='https://1drv.ms/p/c/f403c76ab9321199/EcbCDO-Zzs9OoVGxSyCnmz0BeEuu5luDTmotD9lC2Woz0A?e=WUGiuR' target='_blank' rel='nofollow noopener external'>
+<Button size='lg' className='cursor-default py-8'>
+Check the Presentation
+</Button>
+</a>
+</div>

@@ -47,14 +47,31 @@ CardTitle.displayName = "CardTitle";
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-));
+>(({ className, children, ...props }, ref) => {
+  const content = React.useMemo(() => {
+    if (typeof children === 'string' && children.includes('\\n')) {
+      return children.split('\\n').map((line, index, array) => (
+        <React.Fragment key={index}>
+          {line}
+          {index < array.length - 1 && <br />}
+        </React.Fragment>
+      ));
+    }
+    return children;
+  }, [children]);
+
+  return (
+    <p
+      ref={ref}
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+    >
+      {content}
+    </p>
+  );
+});
 CardDescription.displayName = "CardDescription";
+
 
 const CardContent = React.forwardRef<
   HTMLDivElement,

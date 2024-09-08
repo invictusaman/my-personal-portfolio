@@ -20,20 +20,20 @@ const CodingHours = () => {
   const { data: wakatimeData } = useSWR<Wakatime>("/api/wakatime", fetcher);
 
   return (
-    <Card className="h-full group invert">
+    <Card className="h-full group bg-foreground text-background border-0">
       <CardHeader>
         <div className="flex justify-between">
-          <div className="flex items-center gap-2 mb-2 text-sm">
-            <ClockIcon size={18} />
+          <div className="flex items-center gap-2 mb-2 text-md lg:text-lg">
+            <ClockIcon size={24} />
             <p>Coding hours</p>
           </div>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <InfoIcon size={18} />
+                <InfoIcon size={24} />
               </TooltipTrigger>
-              <TooltipContent className="border p-2 bg-background px-3 rounded-md text-sm text-muted-foreground">
-                I started tracking my coding hours in Mar 13 2024.
+              <TooltipContent className="border p-2 bg-background px-3 rounded-md text-md lg:text-lg text-muted-foreground">
+                I started tracking my coding hours in Sept 02 2024.
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

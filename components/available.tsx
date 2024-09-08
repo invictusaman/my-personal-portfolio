@@ -4,7 +4,7 @@ import { ContactForm } from "./contact-form";
 
 export default function Available() {
   return (
-    <Card className="h-full">
+    <Card className="h-full bg-singleCard text-singleCard-foreground border-0">
       <ContactForm>
         <CardHeader>
           <div className="flex justify-center mb-2">

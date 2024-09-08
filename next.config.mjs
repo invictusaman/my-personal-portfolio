@@ -9,6 +9,7 @@ export default {
   },
 };
 
+
 class VeliteWebpackPlugin {
   static started = false;
   apply(/** @type {import('webpack').Compiler} */ compiler) {

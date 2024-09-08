@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "swajp - A Full Stack Developer",
-    template: "%s | swajp - A Full Stack Developer",
+    default: "Aman Bhattarai - Bringing Data to Life",
+    template: "%s | Aman - Bringing Data to Life",
   },
-  metadataBase: new URL("https://swajp.me"),
+  metadataBase: new URL("https://amanbhattarai.com.np"),
   description:
-    "Czech Full Stack Developer with a passion for web technologies. Check out my projects and get in touch with me.",
+    "Junior Data Analyst with a passion for storytelling, coding, communicating and creating dashboards. Check out my projects and hire me.",
   twitter: {
     card: "summary_large_image",
   },
@@ -33,12 +33,12 @@ export default function RootLayout({
       <body
         className={cn(
           "relative h-full min-h-screen antialiased",
-          inter.className
+          manrope.className
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           storageKey="swajp-theme"
           disableTransitionOnChange

@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   const { email, subject, message } = values;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.seznam.cz",
+    host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
@@ -17,8 +17,8 @@ export async function POST(req: Request) {
 
   try {
     const mail = await transporter.sendMail({
-      from: '"sender@swajp.me" <sender@swajp.me>',
-      to: "me@swajp.me",
+      from: '"sender@amanbhattarai.com" <sender@amanbhattarai.com>',
+      to: "amanbhattarai695@gmail.com",
       subject: subject,
       replyTo: email,
       html: `

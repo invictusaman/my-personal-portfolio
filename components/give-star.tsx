@@ -9,18 +9,18 @@ export default function GiveStar() {
   const { data } = useSWR("/api/github", fetcher);
 
   return (
-    <Card className="h-full group">
+    <Card className="h-full group bg-singleCard text-singleCard-foreground border-0">
       <Link href="https://github.com/swajp/swajp.me" target="_blank">
         <CardHeader>
           <div className="flex justify-between">
-            <div className="flex items-center gap-2 mb-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 mb-2 text-md lg:text-lg text-singleCard-foreground">
               <Star
-                size={18}
+                size={24}
                 className="group-hover:text-yellow-400 group-hover:fill-yellow-400 transition-colors"
               />
               <p>Give it a star</p>
             </div>
-            <ExternalLink size={14} className="text-muted-foreground" />
+            <ExternalLink size={24} className="text-singleCard-foreground" />
           </div>
           <CardTitle>{String(data)} stars</CardTitle>
         </CardHeader>

@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`swajp-me`](https://github.com/swajp/swajp.me).
+
+# My Personal Portfolio 🏆
+
+Hello there 👋 , and welcome to *my personal data portfolio! 🚀*  This website has been in the planning phase for a really long time so I&apos;m glad that I can have this space where I can contribute my data experience, projects, and some knowledge that I have obtained along the way. No matter if you have come here to explore my work, or connect, or to simply learn something new, I welcome you here.
+
+# About 🗃️
+
+This portfolio was created to consolidate my professional journey in the field of data science and analytics. It serves as a centralized hub where visitors can explore my various projects, tutorials, and insights into the world of data. I also share my designing skills.
+
+# Why I build a Data Analyst Portfolio ⚒️
+
+I noticed a lack of good data portfolio themes available, so with my background in web design, I took the chance to develop my own. This theme is designed specifically for data analysts to showcase their work, but it’s flexible enough to be used by anyone, regardless of their field. You can use it as your own portfolio, you can change it however you want and make it personal! Hit me a message if you are interested, I can guide you.
+
+# Key Sections 🔑
+
+**Home:** A welcoming introduction to the site, highlighting my passion for data and the purpose of the portfolio.
+**About:** An overview of my background, skills, and experiences in the data field, with a focus on the tools and technologies I use.
+**Projects:** A detailed view of the data projects I’ve worked on, with descriptions of the tools, techniques, and outcomes.
+**Blog:** Regular posts on data analysis, visualization techniques, tutorials, and industry insights.
+
+# Tech Stack 💻
+
+- Framework : NextJS
+- Styling : TailWind CSS
+- Animation : Framer Motion
+- Content Building : Velite
+- Content Type : MDX
+- Syntax Highlighter : Shiki - Rehype Pretty Code
+- Deployment : Vercel
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing 🤲
 
-## Learn More
+Feel free to contribute! If you have suggestions for improvements or new features, please submit a pull request or open an issue.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Plans
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Add Giscus comment on blog pages.
+- Create a starter-blog with proper documentation to get started.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I'll add more in upcoming days.
