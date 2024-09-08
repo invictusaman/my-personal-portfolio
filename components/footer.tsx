@@ -1,14 +1,15 @@
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
 import MaxWidthWrapper from "./max-width-wrapper";
-import CodingHours from "./coding-hours";
-import Connect from "./connect";
-import Available from "./available";
-import TechStack from "./techstack";
-import Location from "./location";
-import GiveStar from "./give-star";
-import AnimatedWrapper from "./animated-framer-wrapper";
+
+// Dynamically import components
+const AnimatedWrapper = dynamic(() => import("./animated-framer-wrapper"), { ssr: false });
+const Connect = dynamic(() => import("./connect"));
+const CodingHours = dynamic(() => import("./coding-hours"));
+const GiveStar = dynamic(() => import("./give-star"));
+const Available = dynamic(() => import("./available"));
+const Location = dynamic(() => import("./location"));
+const TechStack = dynamic(() => import("./techstack"));
 
 export default function Footer() {
   return (

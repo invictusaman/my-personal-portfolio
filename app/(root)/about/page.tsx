@@ -172,7 +172,7 @@ export default function AboutPage() {
         children: (
           <AnimatedWrapper variant="softExpand">
             <Button className="px-3 py-5 md:px-5 md:py-7 cursor-default text-lg md:text-xl !leading-relaxed font-light" asChild>
-              <Link href="/resume.pdf">Download my Resume</Link>
+              <Link href="https://drive.google.com/file/d/137aHm7UGEQDbRVfbNbBjIxVnxlh5eeEk/view?usp=sharing" rel="nofollow external noreferrr" target="_blank">Download my Resume</Link>
             </Button>
           </AnimatedWrapper>
         )

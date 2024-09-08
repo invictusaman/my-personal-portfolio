@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 export default function AboutSnippet() {
   return (
     <div className="relative py-16 md:py-24">
-      <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 relative">
+      <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 relative" id="about-section">
         <div className="bg-[#E0E5EC] rounded-lg p-8 md:p-12 h-auto mx-auto relative mt-16">
           <div className="absolute top-0 right-0 w-24 h-24 bg-[#E0E5EC]">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

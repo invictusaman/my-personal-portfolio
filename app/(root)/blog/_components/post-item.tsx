@@ -57,7 +57,7 @@ export default function PostItem({ slug, title, description, date, image, tags, 
                                 )}
                             </div>
                             <Link href={`${slug}`} aria-label={`Read more about ${title}`}>
-                                <Button variant="noChange" className="px-12 py-2 font-light xl:py-3">Read More</Button>
+                                <Button variant="noChange" className="px-12 py-2 font-light xl:py-3">Read Article</Button>
                             </Link>
                         </CardFooter>
                     </div>

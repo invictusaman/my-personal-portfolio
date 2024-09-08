@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { ContactForm } from './contact-form';
 import Image from 'next/image';
 import { useAnimationVariant } from '@/components/animated-framer-wrapper';
-import { Github, Linkedin, Twitter, PieChart, BarChart, TrendingUp} from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 
@@ -57,7 +56,7 @@ export default function Hero() {
                   I am on Kaggle
                 </Button>
               </Link>
-              <Link href="/resume.pdf" target="_blank" rel="nofollow noopener external">
+              <Link href="https://drive.google.com/file/d/137aHm7UGEQDbRVfbNbBjIxVnxlh5eeEk/view?usp=sharing" rel="nofollow external noreferrer" target="_blank">
                 <Button variant="secondary" className="text-md md:text-lg px-6 py-6 text-center font-light md:px-7 md:py-7">
                   Get my Resume
                 </Button>
@@ -105,7 +104,7 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
                 <a href="#about-section">
-                  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" role='arrow' aria-labelledby="arrow-title">
+                  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" role='img' aria-labelledby="arrow-title">
                     <title id="arrow-title">Arrow Down</title>
                     <path d="M44 36L42.59 34.59L37 40.17V28H35V40.17L29.42 34.58L28 36L36 44L44 36Z" fill="currentColor"/>
                     <circle cx="36" cy="36" r="35.5" stroke="#E2E2E2"/>
