@@ -4,7 +4,7 @@ description: Sometimes, the raw data can be dirty and messy. This step by step g
 date: Sept 7, 2024
 published: true
 featured: true
-image: /static/data-cleaning/data-cleaning.webp
+image: /blog/data-cleaning/data-cleaning.webp
 tags: ['Python', 'Data Cleaning']
 background: '#FFF6B9'
 ---
@@ -44,7 +44,7 @@ dfCopy.head(5)
 
 Output:
 
-<WideImage src='/static/data-cleaning/output1.png' width='1300' height='560' alt='checking the analyst role dataframe'/>
+<WideImage src='/blog/data-cleaning/output1.webp' width='1300' height='560' alt='checking the analyst role dataframe'/>
 
 
 We can notice the Job ID and Job Link won't play significant role in data analysis, so we drop them.
@@ -314,11 +314,11 @@ Optimal number of clusters (Gap Statistic): 10
 =================================================================
 ```
 
-<WideImage src='/static/data-cleaning/output2.png' width='859' height='547' alt='finding optimal number of cluster with elbow method'/>
+<WideImage src='/blog/data-cleaning/output2.webp' width='859' height='547' alt='finding optimal number of cluster with elbow method'/>
 
-<WideImage src='/static/data-cleaning/output3.png' width='863' height='547' alt='finding optimal number of cluster with Silhouette method'/>
+<WideImage src='/blog/data-cleaning/output3.webp' width='863' height='547' alt='finding optimal number of cluster with Silhouette method'/>
 
-<WideImage src='/static/data-cleaning/output4.png' width='855' height='547' alt='finding optimal number of cluster with Gap Statistic method'/>
+<WideImage src='/blog/data-cleaning/output4.webp' width='855' height='547' alt='finding optimal number of cluster with Gap Statistic method'/>
 
 
 **We set the optimal no. of clusters to 10.**
@@ -341,7 +341,7 @@ cluster_summary = dfCopy.groupby('Cluster')['Position'].apply(list)
 dfCopy.head(5)
 ```
 
-<WideImage src='/static/data-cleaning/output5.png' width='1300' height='586' alt='Dataset After finding clusters'/>
+<WideImage src='/blog/data-cleaning/output5.webp' width='1300' height='586' alt='Dataset After finding clusters'/>
 
 Visualizing the clusters to rename them using WordCloud.
 
@@ -390,7 +390,7 @@ plt.tight_layout(pad=1.0, w_pad=10.0, h_pad=-50.0)  # Increase padding between p
 plt.show()
 ```
 
-<WideImage src='/static/data-cleaning/output6.png' width='1192' height='1647' alt='WordCloud representation of clusters'/>
+<WideImage src='/blog/data-cleaning/output6.webp' width='1192' height='1647' alt='WordCloud representation of clusters'/>
 
 
 **Cluster 0: Systems and Data Analysts**
@@ -445,7 +445,7 @@ dfCopy['Job Roles'] = dfCopy['Cluster'].map(cluster_to_job_title)
 dfCopy.head(5)
 ```
 
-<WideImage src='/static/data-cleaning/output7.png' width='1300' height='608' alt='Dataset with Cluster numbers and respective cluster names'/>
+<WideImage src='/blog/data-cleaning/output7.webp' width='1300' height='608' alt='Dataset with Cluster numbers and respective cluster names'/>
 
 
 ### Lets create columns [Seniority, Position Type, Industry Type, Work Type]
@@ -497,7 +497,7 @@ dfCopy['Seniority'] = dfCopy['Refined Title'].apply(categorize_title)
 dfCopy[['Refined Title','Seniority']]
 ```
 
-<Image src='/static/data-cleaning/output8.png' width='734' height='552' alt='Creating Seniority Column'/>
+<Image src='/blog/data-cleaning/output8.webp' width='734' height='552' alt='Creating Seniority Column'/>
 
 
 #### Position Type Column
@@ -564,7 +564,7 @@ dfCopy['Position Type'] = dfCopy['Refined Title'].apply(categorize_title_types)
 dfCopy[['Refined Title', 'Position Type']]
 ```
 
-<Image src='/static/data-cleaning/output9.png' width='826' height='552' alt='Creating Position Type Column'/>
+<Image src='/blog/data-cleaning/output9.webp' width='826' height='552' alt='Creating Position Type Column'/>
 
 
 #### Work Type Column
@@ -600,7 +600,7 @@ dfCopy['Work Type'] = dfCopy.apply(lambda row: categorize_work_type(row['Refined
 dfCopy[['Refined Title', 'City', 'Work Type']]
 ```
 
-<Image src='/static/data-cleaning/output10.png' width='956' height='552' alt='Creating Work Type Column'/>
+<Image src='/blog/data-cleaning/output10.webp' width='956' height='552' alt='Creating Work Type Column'/>
 
 #### Industry Type Column
 
@@ -650,7 +650,7 @@ dfCopy['Industry Type'] = dfCopy['Company'].apply(categorize_industry_type)
 dfCopy.head()
 ```
 
-<Image src='/static/data-cleaning/output11.png' width='644' height='552' alt='Creating Industry Type Column'/>
+<Image src='/blog/data-cleaning/output11.webp' width='644' height='552' alt='Creating Industry Type Column'/>
 
 Let us check the `info()` to analyze our dataset.
 
@@ -691,7 +691,7 @@ Let us check the content of `Salary` column.
 dfCopy['Salary']
 ```
 
-<Image src='/static/data-cleaning/output12.png' width='722' height='598' alt='Salary column'/>
+<Image src='/blog/data-cleaning/output12.webp' width='722' height='598' alt='Salary column'/>
 
 It is a real messy column. Let us start by analyzing what all characters are present in `Salary` column.
 
@@ -734,7 +734,7 @@ dfCopy['Refined Salary'] = dfCopy['Salary'].apply(clean_salary)
 dfCopy[['Salary','Refined Salary']]
 ```
 
-<Image src='/static/data-cleaning/output13.png' width='750' height='556' alt='Refined Salary column compared to old Salary column'/>
+<Image src='/blog/data-cleaning/output13.webp' width='750' height='556' alt='Refined Salary column compared to old Salary column'/>
 
 Now, we know how salary is distributed, we might need to convert all salaries into `per year` rate, and also we will divide them into `Min` & `Max` salaries, later we calculate `Avg` salary once we fix outliers.
 
@@ -795,7 +795,7 @@ dfCopy[['Min_Salary', 'Max_Salary']] = dfCopy.apply(lambda row: pd.Series(conver
 dfCopy[['Refined Salary', 'Min_Salary', 'Max_Salary']]
 ```
 
-<Image src='/static/data-cleaning/output14.png' width='668' height='548' alt='Refined Salary column along with Min_Salary and Max_Salary'/>
+<Image src='/blog/data-cleaning/output14.webp' width='668' height='548' alt='Refined Salary column along with Min_Salary and Max_Salary'/>
 
 ```py
 print(dfCopy[['Min_Salary', 'Max_Salary']].isna().sum())
@@ -936,9 +936,9 @@ plt.title('Box Plot')
 plt.show()
 ```
 
-<Image src='/static/data-cleaning/output15.png' width='547' height='435' alt='Box plot for Min Salary'/>
+<Image src='/blog/data-cleaning/output15.webp' width='547' height='435' alt='Box plot for Min Salary'/>
 
-<Image src='/static/data-cleaning/output16.png' width='556' height='435' alt='Box plot for Max_Salary'/>
+<Image src='/blog/data-cleaning/output16.webp' width='556' height='435' alt='Box plot for Max_Salary'/>
 
 #### Winsorizing to Cap Salaries
 
@@ -967,9 +967,9 @@ plt.title('Box Plot')
 plt.show()
 ```
 
-<Image src='/static/data-cleaning/output17.png' width='578' height='435' alt='Box plot for Capped Min Salary'/>
+<Image src='/blog/data-cleaning/output17.webp' width='578' height='435' alt='Box plot for Capped Min Salary'/>
 
-<Image src='/static/data-cleaning/output18.png' width='578' height='435' alt='Box plot for Capped Max_Salary'/>
+<Image src='/blog/data-cleaning/output18.webp' width='578' height='435' alt='Box plot for Capped Max_Salary'/>
 
 That is a big improvement, now since most lower bounds lie near 0, we can cap lower bound outliers to nearest minimum value. Upper bound values look fine.
 
@@ -986,7 +986,7 @@ dfCopy['Max_Salary'] = np.where(dfCopy['Max_Salary'] < lower_bound_max, lower_bo
 print(dfCopy[['Min_Salary', 'Max_Salary']])
 ```
 
-<Image src='/static/data-cleaning/output19.png' width='588' height='702' alt='Min and Max Salary after Capping'/>
+<Image src='/blog/data-cleaning/output19.webp' width='588' height='702' alt='Min and Max Salary after Capping'/>
 
 Let us check minimum and maximum values in `Min_Salary` & `Max_Salary` column.
 
@@ -1076,7 +1076,7 @@ dFinal
 
 Final Cleaned DatFrame Output -
 
-<FullImage src='/static/data-cleaning/output20.png' width='2184' height='1000' alt='Final Cleaned DataFrame'/>
+<FullImage src='/blog/data-cleaning/output20.webp' width='2184' height='1000' alt='Final Cleaned DataFrame'/>
 
 Let us export our dataframe as a Comma Separated Values file 📂.
 

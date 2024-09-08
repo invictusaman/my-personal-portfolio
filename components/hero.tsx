@@ -90,7 +90,7 @@ export default function Hero() {
               {...scaleIn}
             >
               <Image
-                src="/static/profile-pic.webp"
+                src="/profile-pic.webp"
                 width={480}
                 height={480}
                 alt="Aman - Data Analyst"

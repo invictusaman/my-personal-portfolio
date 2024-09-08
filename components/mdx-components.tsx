@@ -10,15 +10,15 @@ const useMDXComponent = (code: string) => {
     return fn({ ...runtime }).default
 }
 
-const FullImage: FC<ImageProps> = (props) => (
+const FullImage: FC<ImageProps> = ({ alt = '', ...props }) => (
     <div className="full-width-image">
-        <Image {...props} layout="responsive" />
+        <Image alt={alt} {...props} layout="responsive" />
     </div>
 );
 
-const WideImage: FC<ImageProps> = (props) => (
+const WideImage: FC<ImageProps> = ({ alt = '', ...props }) => (
     <div className="wide-image">
-        <Image {...props} className='mx-auto' />
+        <Image alt={alt} {...props} className='mx-auto' />
     </div>
 );
 
