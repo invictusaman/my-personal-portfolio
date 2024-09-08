@@ -10,7 +10,7 @@ export default function GiveStar() {
 
   return (
     <Card className="h-full group bg-singleCard text-singleCard-foreground border-0">
-      <Link href="https://github.com/swajp/swajp.me" target="_blank">
+      <Link href="https://github.com/invictusaman/my-personal-portfolio" target="_blank">
         <CardHeader>
           <div className="flex justify-between">
             <div className="flex items-center gap-2 mb-2 text-md lg:text-lg text-singleCard-foreground">
