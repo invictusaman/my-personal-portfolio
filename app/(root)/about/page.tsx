@@ -1,10 +1,10 @@
-import MaxWidthWrapper from "@/components/max-width-wrapper";
-import Link from "next/link";
-import Timeline from "@/components/ui/timeline";
-import { Code, FolderKanban, BugOff, BookA, Activity, Download, Award } from "lucide-react";
 import AnimatedWrapper from "@/components/animated-framer-wrapper";
+import MaxWidthWrapper from "@/components/max-width-wrapper";
 import { Button } from "@/components/ui/button";
+import Timeline from "@/components/ui/timeline";
+import { Activity, Award, BookA, BugOff, Code, Download, FolderKanban } from "lucide-react";
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function AboutPage() {
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
             <br/>
             <div className="text-center max-w-md mx-auto mt-6 overflow-hidden">
             <Image className="rounded-lg" src='/about/small-me.webp' alt='Small me' width='600' height='800'/>
-            <p className="text-sm px-4">Yep, that was me in Grade 5 (probably) !</p>
+            <p className="text-sm px-4">Yep, that was me in Grade 2 (probably) !</p>
             </div>
             <br/>
             I was very good at maths from my early school days. <i>Equations and number used to flow naturally to me</i>. I can recall one incident when my maths teacher told me to teach the class for next few days since he was going out of town.
@@ -109,8 +109,8 @@ export default function AboutPage() {
           <AnimatedWrapper variant="softExpand">
             <div className="space-y-4">
               <div>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  IBM Professional Data Analyst (Coming Soon)
+                <Link href="https://www.coursera.org/account/accomplishments/specialization/WMTOKALSPL5K" target="_blank" rel="noopener noreferrer">
+                  IBM Professional Data Analyst
                 </Link>
               </div>
               <div>
@@ -138,11 +138,11 @@ export default function AboutPage() {
       children: (
         <AnimatedWrapper variant="gentleRise">
           <p className="mb-4">
-            I&apos;m currently working on personal projects to showcase my skills and learning. I frequently update them on <b><a href='/todo'>ToDo</a></b> page. Some glimpse for 2024:
+            I&apos;m currently working on personal projects to showcase my skills and learning. I frequently update them on <b><a href='/board'>Kanban board</a></b> page. Some glimpse for 2024:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Build a personal portfolio</li>
-            <li>Do a Capstone Project by next month</li>
+            <li><del>Build a personal portfolio</del> ✅</li>
+            <li><del>Do a Capstone Project by next month</del> ✅</li>
             <li>Work on personal development and well being</li>
           </ul>
         </AnimatedWrapper>
