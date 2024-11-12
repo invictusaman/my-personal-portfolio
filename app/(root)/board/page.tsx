@@ -25,22 +25,22 @@ const KanbanBoard = () => {
     },
     { 
       title: '👷 In Progress', 
-      count: 5, 
+      count: 4, 
       items: [
         { type: 'Goal', title: 'Get active on LinkedIn.' },
         { type: 'Learning', title: 'Learning advanced SQL concepts.' },
         { type: 'Learning', title: 'Reading French language.' },
-        { type: 'Dev', title: 'Leveraging Quarto for Notebook reports.' },
-        { type: 'Learning', title: 'Enrolled with NPower for junior data analyst program.' }
+        { type: 'Dev', title: 'Leveraging Quarto for Notebook reports.' }
       ]
     },
     { 
       title: '💪 Completed', 
-      count: 3, 
+      count: 4, 
       items: [
         { type: 'Task', title: 'Building my personal Portfolio!' },
         { type: 'Project', title: 'Complete IBM Capstone project.' },
         { type: 'Goal', title: 'Get IBM data analyst certificate from coursera.' },
+        { type: 'Learning', title: 'Enrolled with NPower for junior data analyst program.' }
       ]
     },
   ];
@@ -50,7 +50,7 @@ const KanbanBoard = () => {
       <div className="md:mx-auto max-w-[500px] md:max-w-[580px]">
       <h2 className=" text-3xl md:text-4xl mt-3 md:mt-10 font-extrabold">Welcome to my Kanban Board 📋</h2>
       <p className="text-md md:text-xl my-6 md:my-10 font-normal">In this space, I share my progress, plans, accomplishments, and random ideas. While it doesn&apos;t capture everything I&apos;m doing, it offers a glimpse into key parts of my journey. This keeps me alert and focused! <i>The design is inspired from <a href='https://codepen.io/robstinson/pen/BaLQQdX' target='_blank' rel='nofollow noopener external'>Rob&apos;s codepen.</a></i></p>
-      <p className="mb-6 md:mb-10"><i>Last updated on: Sept 25, 2024</i></p>
+      <p className="mb-6 md:mb-10"><i>Last updated on: Nov 12, 2024</i></p>
       </div>
       <div className="flex flex-grow w-screen h-screen mt-4 md:mt-8 space-x-6 overflow-auto text-md md:text-xl">
         {columns.map((column, index) => (
