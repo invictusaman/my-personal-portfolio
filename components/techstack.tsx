@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import {
   FileCode,
@@ -29,6 +29,10 @@ const colors = [
   "bg-violet-400",
   "bg-emerald-400",
   "bg-teal-400",
+  "bg-red-600",
+  "bg-green-600",
+  "bg-pink-600",
+  "bg-purple-600",
 ];
 
 function getRandomColor() {
@@ -54,10 +58,19 @@ export default function TechStack() {
         </div>
         <div className="flex flex-wrap gap-1.5">
           {TECH_STACK.map((tech, index) => (
-            <Link className="cursor-default" href={tech.href} key={tech.title} target="_blank" rel="nofollow noopener">
-              <Badge variant="secondary" className="bg-[hsl(215_24%_80%)] text-singleCard-foreground text-sm lg:text-md hover:bg-[hsl(215_24%_70%)]">
+            <Link
+              className="cursor-default"
+              href={tech.href}
+              key={tech.title}
+              target="_blank"
+              rel="nofollow noopener"
+            >
+              <Badge
+                variant="secondary"
+                className="bg-[hsl(215_24%_80%)] text-singleCard-foreground text-sm lg:text-md hover:bg-[hsl(215_24%_70%)]"
+              >
                 <div
-                  className={`${techColors[index] || 'bg-cyan-400'} w-4 h-4 mr-2 rounded-full`}
+                  className={`${techColors[index] || "bg-cyan-400"} w-4 h-4 mr-2 rounded-full`}
                 />
                 {tech.title}
               </Badge>

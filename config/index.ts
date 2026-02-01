@@ -21,10 +21,10 @@ export const NAVIGATION = [
     title: "Blog",
     href: "/blog",
   },
-  {
-    title: "Board",
-    href: "/board",
-  },
+  //{
+  //  title: "Board",
+  //  href: "/board",
+  //},
   {
     title: "About",
     href: "/about",
@@ -64,7 +64,8 @@ export const SIDE_PROJECTS: Side_Projects[] = [
     description:
       "This project highlights my SQL problem solving skills on advanced concepts like views, stored procedure, ACID transaction and Joins.",
     href: "https://github.com/invictusaman/Advanced_Sql_Queries_On_Chicago_Dataset",
-    github: "https://github.com/invictusaman/Advanced_Sql_Queries_On_Chicago_Dataset",
+    github:
+      "https://github.com/invictusaman/Advanced_Sql_Queries_On_Chicago_Dataset",
     image: "/projects/side_projects/Advanced-SQL.webp",
     tags: ["SQL", "Data Querying"],
   },
@@ -72,63 +73,71 @@ export const SIDE_PROJECTS: Side_Projects[] = [
 
 export const TECH_STACK = [
   {
+    title: "Azure",
+    href: "https://azure.microsoft.com/",
+  },
+  {
+    title: "AWS",
+    href: "https://aws.amazon.com/",
+  },
+  {
+    title: "Databricks",
+    href: "https://www.databricks.com/",
+  },
+  {
+    title: "Apache Spark",
+    href: "https://spark.apache.org/",
+  },
+  {
+    title: "Snowflake",
+    href: "https://www.snowflake.com/",
+  },
+  {
     title: "Python",
-    href: "https://python.org/",
+    href: "https://www.python.org/",
   },
   {
     title: "SQL",
     href: "https://en.wikipedia.org/wiki/SQL",
   },
   {
+    title: "Airflow",
+    href: "https://airflow.apache.org/",
+  },
+  {
+    title: "Delta Lake",
+    href: "https://delta.io/",
+  },
+  {
+    title: "Hadoop",
+    href: "https://hadoop.apache.org/",
+  },
+  {
+    title: "Hive",
+    href: "https://hive.apache.org/",
+  },
+  {
+    title: "Azure Data Factory",
+    href: "https://azure.microsoft.com/en-us/products/data-factory/",
+  },
+  {
+    title: "ADLS Gen2",
+    href: "https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction",
+  },
+  {
+    title: "AWS S3",
+    href: "https://aws.amazon.com/s3/",
+  },
+  {
+    title: "AWS Glue",
+    href: "https://aws.amazon.com/glue/",
+  },
+  {
     title: "Tableau",
-    href: "https://tableau.com/",
+    href: "https://www.tableau.com/",
   },
   {
-    title: "Excel",
-    href: "https://www.microsoft.com/en-ca/microsoft-365/excel",
-  },
-  {
-    title: "Pandas",
-    href: "https://pandas.pydata.org/",
-  },
-  {
-    title: "Numpy",
-    href: "https://numpy.org/",
-  },
-  {
-    title: "Matplotlib",
-    href: "https://matplotlib.org/",
-  },
-  {
-    title: "Seaborn",
-    href: "https://seaborn.pydata.org/",
-  },
-  {
-    title: "Jupyter Notebook",
-    href: "https://jupyter.org/",
-  },
-  {
-    title: "Next JS",
-    href: "https://nextjs.org/",
-  },
-  {
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-  {
-    title: "Blogger",
-    href: "https://blogger.com",
-  },
-  {
-    title: "Framer Motion",
-    href: "https://www.framer.com/motion",
-  },
-  {
-    title: "HTML5",
-    href: "https://en.wikipedia.org/wiki/HTML5",
-  },
-  {
-    title: "Javascript",
-    href: "https://www.javascript.com/",
+    title: "Git",
+    href: "https://git-scm.com/",
   },
 ];

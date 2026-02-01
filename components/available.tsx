@@ -13,7 +13,7 @@ export default function Available() {
               <span className="relative inline-flex h-4 w-4 rounded-full bg-green-400"></span>
             </span>
           </div>
-          <CardTitle className="text-center">Available for work!</CardTitle>
+          <CardTitle className="text-center">Give me Projects!</CardTitle>
         </CardHeader>
       </ContactForm>
     </Card>
