@@ -10,12 +10,12 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Aman Bhattarai - Bringing Data to Life",
-    template: "%s | Aman - Bringing Data to Life",
+    default: "Aman Bhattarai - Senior Data Engineer",
+    template: "%s | Aman - Senior Data Engineer",
   },
   metadataBase: new URL("https://amanbhattarai.com.np"),
   description:
-    "Junior Data Analyst with a passion for storytelling, coding, communicating and creating dashboards. Check out my projects and hire me.",
+    "Senior Data Engineer with 6+ years building scalable data platforms using Azure Databricks, Snowflake, Spark, and AWS. Specialized in ETL/ELT pipelines, data lakehouse architecture, and cloud-native solutions.",
   twitter: {
     card: "summary_large_image",
   },
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={cn(
           "relative h-full min-h-screen antialiased",
-          manrope.className
+          manrope.className,
         )}
       >
         <ThemeProvider
